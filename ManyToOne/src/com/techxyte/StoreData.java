@@ -17,7 +17,7 @@ public class StoreData {
 		    Transaction t=session.beginTransaction();    
 		        
 		    Employee e1=new Employee();    
-		    e1.setName("Ravi kumar");    
+		    e1.setName("SharathKumar");    
 		    e1.setEmail("ravi@gmail.com");    
 		      
 		    Employee e2=new Employee();  
