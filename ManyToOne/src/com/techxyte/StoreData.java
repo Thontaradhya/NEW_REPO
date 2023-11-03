@@ -39,7 +39,7 @@ public class StoreData {
 		    t.commit();    
 		        
 		    session.close();    
-		    System.out.println("success");    
+		    System.out.println("successfully complited");    
 		    
 		    
 		}   
