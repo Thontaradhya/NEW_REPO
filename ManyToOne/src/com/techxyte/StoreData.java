@@ -21,7 +21,7 @@ public class StoreData {
 		    e1.setEmail("ravi@gmail.com");    
 		      
 		    Employee e2=new Employee();  
-		    e2.setName("narayana");  
+		    e2.setName("narendra");  
 		    e2.setEmail("arun@gmail.com");  
 		        
 		    Address address1=new Address();    
