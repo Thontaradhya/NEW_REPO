@@ -15,12 +15,13 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@v2
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        with:
-          args: -X  # Add the -X option to enable debug logging
+      - uses: sonarsource/sonarqube-scan-action@v2
+  env:
+    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+  with:
+    args: -X
+# Add the -X option to enable debug logging
       # If you wish to fail your job when the Quality Gate is red, uncomment the
       # following lines. This would typically be used to fail a deployment.
       # - name: SonarQube Quality Gate
