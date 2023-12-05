@@ -19,8 +19,8 @@ jobs:
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@v2
         with:
-          SONAR_TOKEN: your-sonar-token
-          SONAR_HOST_URL: your-sonar-host-url
+          SONAR_TOKEN: sqp_8989803b4674aa3726ead1994376db391c8834af
+          SONAR_HOST_URL: http://localhost:9000
           args: -X
 
       # If you wish to fail your job when the Quality Gate is red,the
