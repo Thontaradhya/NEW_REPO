@@ -22,7 +22,6 @@ jobs:
         with:
           args: -X
 
-
       # If you wish to fail your job when the Quality Gate is red,the
       # following lines. This would typically be used to fail a deployment.
       # - name: SonarQube Quality Gate
