@@ -19,7 +19,7 @@ jobs:
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@v2
         with:
-          SONAR_TOKEN: ${{ secrets.sqp_8989803b4674aa3726ead1994376db391c8834af }}
+          SONAR_TOKEN: ${{ secrets.sqp_3fa44c1d28dc38fd086061f6a04103eb36812bce }}
           SONAR_HOST_URL: http://localhost:9000
           args: -X
           projectBaseDir: .
