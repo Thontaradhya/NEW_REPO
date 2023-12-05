@@ -16,29 +16,14 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
+      - name: Set up SonarQube
+        env:
+          SONAR_TOKEN: ${{ secrets.sqp_3fa44c1d28dc38fd086061f6a04103eb36812bce }}
+          SONAR_HOST_URL: http://localhost:9000
+        run: echo "SONAR_TOKEN=${{ secrets.sqp_3fa44c1d28dc38fd086061f6a04103eb36812bce }}" >> $GITHUB_ENV && echo "SONAR_HOST_URL=http://localhost:9000" >> $GITHUB_ENV
+
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@v2
         with:
-          SONAR_TOKEN: ${{ secrets.sqp_3fa44c1d28dc38fd086061f6a04103eb36812bce }}
-          SONAR_HOST_URL: http://localhost:9000
           args: -X
           projectBaseDir: .
-
-      # Add other steps or jobs as needed
-
-
-      # If you wish to fail your job when the Quality Gate is red,the
-      # following lines. This would typically be used to fail a deployment.
-      # - name: SonarQube Quality Gate
-      #   uses: sonarsource/sonarqube-quality-gate-action@v2
-      # If you wish to fail your job when the Quality Gate is red,the
-      # following lines. This would typically be used to fail a deployment.
-      # - name: SonarQube Quality Gate
-      #   uses: sonarsource/sonarqube-quality-gate-action@v2
-      #   timeout-minutes: 5
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-      #   timeout-minutes: 5
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
